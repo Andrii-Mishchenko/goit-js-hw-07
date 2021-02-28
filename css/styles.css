@@ -1,0 +1,44 @@
+/* вместо контейнера */
+body {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#gallery li {
+  width: 370px;
+  margin: 10px;
+  list-style: none;
+}
+
+#gallery li img {
+  display: block;
+  object-fit: cover;
+}
+
+#counter {
+  margin-top: 40px;
+}
+
+#name-input {
+  margin-top: 40px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+  margin-top: 40px;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+#font-size-control {
+  display: block;
+  margin-top: 40px;
+}
