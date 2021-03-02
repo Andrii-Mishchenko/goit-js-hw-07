@@ -1,5 +1,6 @@
 // создаем переменные: текущее значение спана, кнопку увелисения и кнопку уменьшения:
-let counterValue = Number(document.querySelector('#value').textContent);
+const counterValueRequest = document.querySelector('#value');
+let counterValue = Number(counterValueRequest.textContent);
 const increaseBtn = document.querySelector('[data-action="increment"]');
 const decreaseBtn = document.querySelector('[data-action="decrement"]');
 
@@ -10,10 +11,10 @@ decreaseBtn.addEventListener('click', decrease);
 // создаем функции increment и decrement для увеличения и уменьшения значения счетчика
 function increase() {
     counterValue += 1;
-    document.querySelector('#value').textContent = counterValue;   
+    counterValueRequest.textContent = counterValue;   
 }
 
 function decrease() {
     counterValue -= 1;
-    document.querySelector('#value').textContent = counterValue; 
+    counterValueRequest.textContent = counterValue; 
 }
