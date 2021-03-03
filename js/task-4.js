@@ -9,12 +9,34 @@ increaseBtn.addEventListener('click', increase);
 decreaseBtn.addEventListener('click', decrease);
 
 // создаем функции increment и decrement для увеличения и уменьшения значения счетчика
+
 function increase() {
-    counterValue += 1;
-    counterValueRequest.textContent = counterValue;   
+updateCounterValue(true);
+updateView();
 }
 
 function decrease() {
-    counterValue -= 1;
-    counterValueRequest.textContent = counterValue; 
+updateCounterValue(false);
+updateView();
 }
+
+function updateCounterValue(payload) {
+if (payload) counterValue += 1;
+else counterValue -= 1;
+}
+
+function updateView() {
+counterValueRequest.textContent = counterValue;
+}
+
+
+// Неправильний варіант:
+// function increase() {
+//     counterValue += 1;
+//     counterValueRequest.textContent = counterValue;   
+// }
+
+// function decrease() {
+//     counterValue -= 1;
+//     counterValueRequest.textContent = counterValue; 
+// }
